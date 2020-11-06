@@ -261,9 +261,12 @@ Create a function called `removeArtist` that takes two arguments:
  * it will remove Amedeo Modigliani from our dataset and log the number 19.  
 */
 function removeArtist(art,num) {
+   if(art.shift([num])){
+     return art.length;
+   }
    
 }
-   
+   console.log(removeArtist(artists,0))
 
 /**
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -280,10 +283,17 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(art){
+    if(art.push({"id": "20",
+      "name":"Patrice Jean",
+      "year": "1991-Present",
+      "genre": "Web Design",
+      "nationality": "Haitian",
+      "bio":"I am a jack of all trades I have done alot throught this thing we call life. Now I am looking to get one more skill under my belt. "})){
+    return art
   }
-
+  }
+console.log(addArtist(artists));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -295,10 +305,16 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(hundred){
+  let newHundred = [];
+  for(let i in hundred){
+    if(hundred[i]["paintings"]>=100){
+      newHundred.push(hundred[i]['name']);
+    }
+  }
+  return newHundred;
 }
-
+console.log(lotsOfArt(artists));
 
 
 
