@@ -20,6 +20,13 @@ font: inherit;
 vertical-align: baseline;  
 }
 /*GENERAL STYLES*/
+
+*{
+    max-width:100%;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 html{
     font-size:62.5%;
 }
@@ -59,6 +66,9 @@ img {
     margin-right: auto;	
     border-radius: 2%;	
 }	
+.home{
+    font-weight: 900;
+}
 img:hover {	
     opacity: 80%;	
 }	
@@ -91,19 +101,19 @@ nav span{
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg');		
     background-position: center;	
     color: white;	
-    width:80%;
+    width:88%;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:60vh;
-    margin:5% 0;
+    height:80vh;
+    margin:3% 0;
 }	
 .title-container div:hover {	
     opacity: 80%;	
 }	
 .title-container hr{
-    width:80%;
+    width:100%;
 }
 button{
     padding:1% 3%;
@@ -123,14 +133,134 @@ button:hover{
 .artists-container{
     display:flex;
     justify-content: space-around;
-    width:80%;
+    width:100%;
     margin:0 auto;
 }
 
 .artist{
-    width:40%;
+    width:50%;
     text-align:center;
 }
 .artist img{
-    width:100%;
+    width:80%;
+    height: 45vh;
+    
 }
+.bio{
+    width: 95%;
+    text-align: center;
+}
+/*Mobile section max 500px*/
+
+@media(max-width:500px){
+
+
+
+
+    
+    body{
+        line-height: 1;  	
+    }
+    h1, p, .name, .bio {		
+        margin: 3%;	
+    }	
+    h1{
+        font-size:6rem;
+        margin:0 auto;
+        padding-top: 5%;
+    }
+    a {	
+        text-decoration: none;	
+        color: black;
+        font-size:2.5rem;	
+    }		
+    .name{	
+        font-size: 30%;	
+        font-weight: 200;	
+    }	
+    img {	
+        height:5rem;	
+        object-fit: cover;	
+        display: flex;
+        flex-direction: column;	
+        margin: 2%;	
+        margin-top: 4%;	
+        margin-left: auto;	
+        margin-right: auto;	
+        border-radius: 2%;	
+    }		
+    
+    /*HEADER STYLES */
+    header{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav{
+        width:60%;
+        display:flex;
+        justify-content:space-evenly;
+        margin-top:1% auto;
+        padding: 2% 20%;
+    }
+    nav a{
+        margin: 0 auto;
+        text-align: center;
+        width: 20%;
+
+        color:#626262;
+    }
+    nav span{
+        border-left:3px solid #626262;
+    
+    }
+    /*Title Section Styles*/
+    .title-container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .title-container div {			
+        background-position: center;	
+        color: white;	
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:80vh;
+        margin:3% 0;
+    }	
+   	
+  
+    }
+    /*Artists Section Styles */
+    .artists-container{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width:90%;
+        margin:0 auto;
+
+        
+    }
+    
+    .artist{
+        width: 100%;
+        text-align:center;
+        padding: 5% 10%;
+    }
+    .artist img{
+        width:80%;
+        height: 30vh;
+        
+    }
+    .bio{
+        width: 100%;
+        text-align: center;
+    }
+
+
+
+
+}/*media closing bracket*/
