@@ -242,13 +242,14 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(arg){
   let cent = [];
   for(let i in arg){
-    if(arg[i]['years'] >= 1900 && arg[i]['years'] <= 2000){
-      cent.push(arg[i]);
+    if(arg[i]["years"] > "1900" && arg[i]["years"] <= "2000"){
+      cent.push(arg[i]["name"]);
     }
   }
-  return arg
+  return cent;
 }
 console.log(get20s(artists));
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
